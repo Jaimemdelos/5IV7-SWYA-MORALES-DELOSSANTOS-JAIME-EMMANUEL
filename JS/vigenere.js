@@ -1,3 +1,7 @@
+function Redirect(){
+    window.location ="vigenere.html"
+}
+
 function cifrar() {
     var SIZE_ALF = 26;
     
