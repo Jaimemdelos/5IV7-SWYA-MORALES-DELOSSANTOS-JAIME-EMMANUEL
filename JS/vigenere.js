@@ -1,4 +1,4 @@
-function Redirect(){
+function Redirect2(){
     window.location ="vigenere.html"
 }
 
