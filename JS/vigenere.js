@@ -10,13 +10,13 @@ function cifrar() {
     var mensaje = document.getElementById("mensaje").value;
     var size_mensaje = mensaje.length;
     
- 
+
       var alfabeto = new Array();
     for(i = 0; i < SIZE_ALF; i++){
       alfabeto[i] = String.fromCharCode(65 + i);
     }
     
-    
+  
     var valores_clave = new Array();
     for(i = 0; i < size_clave; i++){
       for(j = 0; j < SIZE_ALF; j++){
@@ -25,6 +25,7 @@ function cifrar() {
         }
       }
     }
+    
    
     var mensaje_cifrado = new Array();
     for(i = 0; i < size_mensaje; i++){
@@ -37,7 +38,7 @@ function cifrar() {
       mensaje_cifrado[i] = alfabeto[(valores_clave[i%size_clave] + pos_letra) % SIZE_ALF];
     }
     
-    // Escribir el resultado en el HTML
+   
     div = document.getElementById("resultado1");
     var cadena = "";
     for(i = 0; i < size_mensaje; i++){
@@ -62,13 +63,13 @@ function cifrar() {
     var mensaje = document.getElementById("mensaje_cif").value;
     var size_mensaje = mensaje.length;
     
-  
+ 
       var alfabeto = new Array();
     for(i = 0; i < SIZE_ALF; i++){
       alfabeto[i] = String.fromCharCode(65 + i);
     }
     
- 
+  
     var valores_clave = new Array();
     for(i = 0; i < size_clave; i++){
       for(j = 0; j < SIZE_ALF; j++){
@@ -78,7 +79,7 @@ function cifrar() {
       }
     }
     
- 
+    
     var mensaje_descifrado = new Array();
     for(i = 0; i < size_mensaje; i++){
       var pos_letra;
@@ -89,8 +90,7 @@ function cifrar() {
       }
       mensaje_descifrado[i] = alfabeto[modNeg((pos_letra - valores_clave[i%size_clave]), SIZE_ALF)];
     }
-    
-    
+ 
     div = document.getElementById("resultado2");
     var cadena = "";
     for(i = 0; i < size_mensaje; i++){
