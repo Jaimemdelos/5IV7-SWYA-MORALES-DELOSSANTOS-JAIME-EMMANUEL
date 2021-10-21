@@ -26,9 +26,7 @@
             <button onclick="return cifrar()">cifrar</button>
         </form>
         <p id="cifrado"></p>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" > </script>
-        <script src="./js/cifrar.js"></script>
+        
     </div>
      
     <div>
@@ -38,6 +36,44 @@
       <a class="nav-link" href="./descifrado.html">Descifrado</a>
     <div>
   </center>
+  <br>
+  <br>
+  <br>
+  <center>
+        <form name="form">
+            <div class="form-group">
+                <input type="file" id="archivo">
+                <br>
+                <p>Ingresa la llave</p>
+                <input type="radio" name="tipoDeAES" value="128"> 128
+                <br>
+                <input type="radio" name="tipoDeAES" value="192"> 192
+                <br>
+                <input type="radio" name="tipoDeAES" value="256"> 256
+                <br>
+                <input type="text" name="llave" value="ingrese la llave" id="llave">
+                <br>
+                <button onclick="return descifrar()">descifrar</button>
+            </div>
+        </form>
+        <h4>mensaje cifrado</h4>
+        <p id="contenido"></p>
+        <p id="mensajes"></p>
+        <h4>mensaje descifrado</h4>
+        <p id="mensajeDescifrado"></p>
+     
+    </div>
+    
+    <div>
+      <a class="nav-link" href="./index.html">Volver</a>
+    <div>
+    <div>
+      <a class="nav-link" href="./cifrado.html">Cifrado</a>
+    <div>
+  </center>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" > </script>
+  <script src="JS/aes.js"></script>
  
 </body>
 
